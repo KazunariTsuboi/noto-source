@@ -11,7 +11,7 @@ script table end
 feature table begin
 0	abvs	8, 9, 10, 7
 1	blwf	11, 12, 13
-2	blws	14, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27, 50, 51
+2	blws	14, 16, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27, 50, 51, 66
 3	locl	0, 1, 4
 4	locl	5, 6
 
@@ -8290,3 +8290,38 @@ ra_atn_dot	sp14	ra_atn_dot
 
 lookup end
 
+
+lookup	66	chained
+
+RightToLeft	no
+IgnoreBaseGlyphs	no
+IgnoreLigatures	no
+IgnoreMarks	no
+MarkAttachmentType	2
+
+backtrackclass definition begin
+na.alt	1
+class definition end
+
+class definition begin
+medial_ha	1
+class definition end
+
+lookaheadclass definition begin
+_u_spacing	1
+class definition end
+
+class-chain		1	1	1, 67
+
+lookup end
+
+lookup	67	ligature
+
+RightToLeft	no
+IgnoreBaseGlyphs	no
+IgnoreLigatures	no
+IgnoreMarks	no
+
+medial_ha_u	medial_ha	_u_spacing
+
+lookup end
